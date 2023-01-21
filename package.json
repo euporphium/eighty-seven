@@ -5,7 +5,9 @@
     "build": "solid-start build",
     "start": "solid-start start",
     "lint": "npx eslint src test",
-    "lint:fix": "npm run lint -- --fix"
+    "lint:fix": "npm run lint -- --fix",
+    "prettier": "npx prettier src --check",
+    "prettier:fix": "npm run prettier -- --write"
   },
   "type": "module",
   "devDependencies": {
@@ -16,6 +18,7 @@
     "eslint": "^8.32.0",
     "eslint-plugin-solid": "^0.9.3",
     "postcss": "^8.4.21",
+    "prettier": "^2.8.3",
     "solid-start-node": "^0.2.15",
     "typescript": "^4.9.4",
     "vite": "^3.2.5"
