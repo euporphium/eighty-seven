@@ -3,12 +3,18 @@
   "scripts": {
     "dev": "solid-start dev",
     "build": "solid-start build",
-    "start": "solid-start start"
+    "start": "solid-start start",
+    "lint": "npx eslint src test",
+    "lint:fix": "npm run lint -- --fix"
   },
   "type": "module",
   "devDependencies": {
     "@types/node": "^18.11.18",
+    "@typescript-eslint/eslint-plugin": "^5.48.2",
+    "@typescript-eslint/parser": "^5.48.2",
     "esbuild": "^0.14.54",
+    "eslint": "^8.32.0",
+    "eslint-plugin-solid": "^0.9.3",
     "postcss": "^8.4.21",
     "solid-start-node": "^0.2.15",
     "typescript": "^4.9.4",
