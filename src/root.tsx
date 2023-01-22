@@ -1,5 +1,5 @@
 // @refresh reload
-import { Suspense } from "solid-js";
+import { Suspense } from 'solid-js';
 import {
   A,
   Body,
@@ -11,8 +11,9 @@ import {
   Routes,
   Scripts,
   Title,
-} from "solid-start";
-import "./root.css";
+} from 'solid-start';
+import { setColorScheme } from '~/lib/color-scheme';
+import './root.css';
 
 export default function Root() {
   return (
