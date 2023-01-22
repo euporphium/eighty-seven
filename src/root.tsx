@@ -22,6 +22,7 @@ export default function Root() {
         <Title>SolidStart - Bare</Title>
         <Meta charset="utf-8" />
         <Meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script src="/color-scheme.js" />
       </Head>
       <Body>
         <Suspense>
@@ -34,6 +35,9 @@ export default function Root() {
           </ErrorBoundary>
         </Suspense>
         <Scripts />
+        <button onClick={() => setColorScheme('light')}>Light</button>
+        <button onClick={() => setColorScheme('dark')}>Dark</button>
+        <button onClick={() => setColorScheme('system')}>Reset</button>
       </Body>
     </Html>
   );
