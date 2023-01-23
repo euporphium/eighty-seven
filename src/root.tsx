@@ -12,6 +12,7 @@ import {
   Scripts,
   Title,
 } from 'solid-start';
+import cn from 'classnames';
 import { setColorScheme } from '~/lib/color-scheme';
 import './root.css';
 
@@ -38,7 +39,12 @@ export default function Root() {
           media="(prefers-color-scheme: dark)"
         />
       </Head>
-      <Body>
+      <Body
+        class={cn(
+          'bg-neutral-100 dark:bg-neutral-900',
+          'text-neutral-800 dark:text-neutral-300'
+        )}
+      >
         <Suspense>
           <ErrorBoundary>
             <A href="/">Index</A>
