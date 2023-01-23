@@ -24,6 +24,10 @@ export default function Root() {
         <Meta name="viewport" content="width=device-width, initial-scale=1" />
         <script src="/color-scheme.js" />
         <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,400|Patrick+Hand:400"
+        />
+        <link
           href="/favicon-light.ico"
           rel="icon"
           media="(prefers-color-scheme: light)"
