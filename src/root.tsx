@@ -47,17 +47,19 @@ export default function Root() {
       >
         <Suspense>
           <ErrorBoundary>
-            <A href="/">Index</A>
-            <A href="/about">About</A>
+            <nav class="p-2 flex gap-2">
+              <A href="/">Index</A>
+              <A href="/about">About</A>
+            </nav>
+            {/*<button onClick={() => setColorScheme('light')}>Light</button>*/}
+            {/*<button onClick={() => setColorScheme('dark')}>Dark</button>*/}
+            {/*<button onClick={() => setColorScheme('system')}>Reset</button>*/}
             <Routes>
               <FileRoutes />
             </Routes>
           </ErrorBoundary>
         </Suspense>
         <Scripts />
-        <button onClick={() => setColorScheme('light')}>Light</button>
-        <button onClick={() => setColorScheme('dark')}>Dark</button>
-        <button onClick={() => setColorScheme('system')}>Reset</button>
       </Body>
     </Html>
   );
