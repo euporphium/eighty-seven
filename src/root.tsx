@@ -19,10 +19,20 @@ export default function Root() {
   return (
     <Html lang="en">
       <Head>
-        <Title>SolidStart - Bare</Title>
+        <Title>87</Title>
         <Meta charset="utf-8" />
         <Meta name="viewport" content="width=device-width, initial-scale=1" />
         <script src="/color-scheme.js" />
+        <link
+          href="/favicon-light.ico"
+          rel="icon"
+          media="(prefers-color-scheme: light)"
+        />
+        <link
+          href="/favicon-dark.ico"
+          rel="icon"
+          media="(prefers-color-scheme: dark)"
+        />
       </Head>
       <Body>
         <Suspense>
