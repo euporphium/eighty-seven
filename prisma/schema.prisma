@@ -9,3 +9,16 @@ datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }
+
+model Fact {
+  id           Int            @id @default(autoincrement())
+  text         String
+  FactOfTheDay FactOfTheDay[]
+}
+
+model FactOfTheDay {
+  id     Int      @id @default(autoincrement())
+  fact   Fact     @relation(fields: [factId], references: [id])
+  date   DateTime @unique
+  factId Int
+}
