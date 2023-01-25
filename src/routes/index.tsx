@@ -1,7 +1,15 @@
-import { Title } from 'solid-start';
+import { Title, useRouteData } from 'solid-start';
+import { createServerData$ } from 'solid-start/server';
 import cn from 'classnames';
+import { getMostRecentFact } from '~/db/facts';
+
+export function routeData() {
+  return createServerData$(getMostRecentFact);
+}
 
 export default function Home() {
+  const factOfTheDay = useRouteData<typeof routeData>();
+
   return (
     <main class="p-4 text-center">
       <Title>Welcome to 87!</Title>
@@ -14,13 +22,7 @@ export default function Home() {
       >
         Hello world!
       </h1>
-      <p class="mx-auto my-8">
-        Visit{' '}
-        <a href="https://start.solidjs.com" target="_blank">
-          start.solidjs.com
-        </a>{' '}
-        to learn how to build SolidStart apps.
-      </p>
+      <p class="mx-auto my-8">{factOfTheDay()?.fact.text}</p>
     </main>
   );
 }
